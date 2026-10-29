@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
+#define SIZE 5
+
+int main(void)
 {
     int i;
-    int score[5];
-    
-    score[0] = 100;
-    score[1] = 90;
-    score[2] = 80;
-    score[3] = 70;
-    score[4] = 60;
-    
-    for (i = 0; i < 5; i++)
+    int score[SIZE];
+    printf("5명의 점수를 입력하세요.\n");
+
+    for (i = 0; i < SIZE; i++)
+    {
+        scanf("%d", &score[i]);
+    }
+    for (i = 0; i < SIZE; i++)
     {
         printf("score[%d] = %d\n", i, score[i]);
     }
