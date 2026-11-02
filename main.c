@@ -6,18 +6,24 @@
 int main(void)
 {
     int i;
+    int grade[SIZE];
     int score[SIZE];
-    int sum = 0;
-
-    printf("5명의 점수를 입력하세요.\n");
 
     for (i = 0; i < SIZE; i++)
     {
-        scanf("%d", &score[i]);
-        sum += score[i];
+        grade[i] = rand() % 100;
+        printf("grade[%d]: %d\n", i, grade[i]);
     }
 
-    printf("성적 평균: %d\n", sum / SIZE);
+    for (i = 0; i < SIZE; i++)
+    {
+        score[i] = grade[i];
+    }
+
+    for (i = 0; i < SIZE; i++)
+    {
+        printf("score[%d]: %d\n", i, score[i]);
+    }
 
     return 0;
 }
